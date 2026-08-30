@@ -17,6 +17,12 @@ This file provides system context and operational rules for Antigravity and othe
 
 ## 2. Agent Operational Rules
 
+### Rule 0: Strict Scope Adherence (No Unsolicited Additions)
+
+- **ONLY** add, modify, or create what the user explicitly asks for.
+- **NEVER** add extra features, unsolicited UI elements, speculative code, or unasked-for boilerplate.
+- Keep all implementations strictly scoped, minimal, and focused exactly on the user's prompt.
+
 ### Rule 1: Simulation Purity
 
 - **NEVER** import React, DOM APIs (`window`, `document`), or rendering libraries (`pixi.js`, `three`, `canvas`) inside `src/engine/`.

@@ -169,6 +169,10 @@ src/
 
 ## 7. AI Assistant Instructions (How to work on this repo)
 
+0. **STRICT SCOPE ADHERENCE (NO UNSOLICITED ADDITIONS):**
+   - **ONLY** add or change what the user explicitly asks for.
+   - **DO NOT** add extra features, extra UI widgets, unasked-for boilerplate, or speculative implementations.
+   - Keep all changes minimal, precise, and strictly confined to the user's prompt.
 1. **Keep Engine Independent:** When implementing game mechanics, implement them in `src/engine/` first with comprehensive unit tests before connecting to rendering or UI.
 2. **Design for Extensibility:** Create data-driven configs in `src/data/` (JSON/TS constants) instead of hardcoding aircraft sizes, building costs, or passenger parameters.
 3. **Step-by-Step Implementation:** When building complex features (e.g., Baggage System or ATC), break the work into:

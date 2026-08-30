@@ -12,6 +12,7 @@ Detailed guidelines and architectural rules are defined in:
 
 ### Key Priorities:
 
+0. **Strict Scope Adherence:** Only add or change what the user explicitly asks for. NEVER add extra features, unsolicited UI elements, or unasked-for boilerplate.
 1. **No direct code without approval:** Keep architecture decoupled into Engine (headless), Renderer (PixiJS 2D), and UI (React 19 + Jotai).
 2. **Deterministic & Headless Simulation:** All game logic in `src/engine/` is completely independent of DOM/React/PixiJS.
 3. **High Performance:** Object pooling, spatial hash partitioning, flow field/graph pathfinding, Jotai atomic UI updates, 60fps web target.

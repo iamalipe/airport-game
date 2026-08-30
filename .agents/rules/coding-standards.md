@@ -4,6 +4,14 @@ This document specifies the code style, typing rules, error handling, and testin
 
 ---
 
+## 0. Strict Scope Adherence (No Unsolicited Additions)
+
+- **Rule:** ONLY implement, modify, or add what the user explicitly requests.
+- **Prohibited:** Do NOT add unasked-for UI buttons, extra features, speculative helper code, or unsolicited widgets.
+- Keep every implementation minimal, tight, and strictly confined to the exact instructions in the user's prompt.
+
+---
+
 ## 1. TypeScript Standards & Domain Typing
 
 ### 1.1 Strict Type Safety
