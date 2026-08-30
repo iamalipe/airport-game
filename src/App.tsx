@@ -1,19 +1,24 @@
-import React from 'react';
-import { Route, Switch, Redirect } from 'wouter';
-import { HomePage, GamePage, TestPage, DebugPage } from './pages';
+import React, { useEffect, useRef } from "react";
+import { pixiApp } from "./pixi-app";
 
 export const App: React.FC = () => {
+  const containerRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    if (containerRef.current) {
+      void pixiApp.init(containerRef.current);
+    }
+
+    return () => {
+      pixiApp.destroy();
+    };
+  }, []);
+
   return (
-    <Switch>
-      <Route path="/" component={HomePage} />
-      <Route path="/game" component={GamePage} />
-      <Route path="/test" component={TestPage} />
-      <Route path="/debug" component={DebugPage} />
-      {/* Fallback route */}
-      <Route>
-        <Redirect to="/" />
-      </Route>
-    </Switch>
+    <div
+      ref={containerRef}
+      className="fixed inset-0 w-screen h-screen overflow-hidden bg-black select-none"
+    />
   );
 };
 
